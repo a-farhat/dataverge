@@ -3,57 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ahmad Farhat | Dataverge</title>
+  <title>DataVerge | Ahmad Farhat</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
-  <!-- Header / Hero Section -->
+  <!-- Header / Navigation -->
   <header class="bg-white shadow-md">
-    <div class="max-w-5xl mx-auto px-4 py-6 text-center">
-      <h1 class="text-4xl font-bold mb-1">Ahmad Farhat</h1>
-      <p class="text-sm text-gray-600 mb-3">Turning data into insight through Python, .NET, and visualization</p>
-
-      <!-- social links + coffee (preserved) -->
-      <div class="flex justify-center gap-6 flex-wrap">
-        <a href="https://github.com/a-farhat" target="_blank" class="text-gray-700 hover:text-gray-900 font-medium">GitHub</a>
-        <a href="https://www.linkedin.com/in/ahmadfarhat/" target="_blank" class="text-gray-700 hover:text-gray-900 font-medium">LinkedIn</a>
-        <a href="https://medium.com/@ahmadgmail" target="_blank" class="text-gray-700 hover:text-gray-900 font-medium">Medium</a>
-        <a href="https://www.buymeacoffee.com/afarhat" target="_blank" class="text-yellow-600 hover:text-yellow-700 font-medium">☕ Coffee</a>
-      </div>
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-700">DataVerge</h1>
+      <nav class="space-x-6 text-gray-700">
+        <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Featured (smaller) Hero Banner - clickable image that links to the YouTube video -->
+  <!-- Hero Banner -->
   <section class="max-w-5xl mx-auto px-4 mt-6">
     <div class="relative rounded-lg overflow-hidden shadow-md">
       <a href="https://www.youtube.com/watch?v=OBoMLZTtqb8" target="_blank" aria-label="Open YouTube video">
-        <!-- max-h-44 keeps the image visibly smaller -->
-        <img src="images/blockbuster.png" alt="Video thumbnail" class="w-full object-cover max-h-44 sm:max-h-64">
+        <img src="images/blockbuster.png" alt="Video thumbnail" class="w-full object-cover max-h-52 sm:max-h-64">
       </a>
 
-      <!-- small centered watch button overlay (subtle) -->
-      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="absolute inset-0 flex items-center justify-center">
         <a href="https://www.youtube.com/watch?v=OBoMLZTtqb8" target="_blank"
-           class="pointer-events-auto bg-black bg-opacity-50 text-white px-3 py-1.5 rounded-full font-medium hover:bg-opacity-70 transition">
+           class="bg-black bg-opacity-50 text-white px-4 py-2 rounded-full font-medium hover:bg-opacity-70 transition">
           ▶️ Watch on YouTube
         </a>
       </div>
 
-      <!-- credit bar -->
       <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white text-xs text-center py-1">
         Image from <a href="https://www.youtube.com/watch?v=OBoMLZTtqb8" target="_blank" class="underline text-blue-200">Chill City FM YouTube Channel</a>
       </div>
     </div>
   </section>
 
+  <!-- About Section -->
+  <section id="about" class="bg-white py-12 mt-10">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-3xl font-semibold mb-4">About DataVerge</h2>
+      <p class="text-gray-700 leading-relaxed">
+        DataVerge explores the intersection of AI, health data analytics, and intelligent applications.
+        From Python-based analytics tools to ASP.NET-powered dashboards, our projects aim to turn data into meaningful insights.
+      </p>
+    </div>
+  </section>
+
   <!-- Projects Section -->
-  <section id="projects" class="max-w-5xl mx-auto px-4 py-10">
+  <section id="projects" class="max-w-5xl mx-auto px-4 py-12">
     <h2 class="text-3xl font-semibold mb-6 text-center">Projects</h2>
 
     <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-8">
 
-      <!-- Smart Expense Dashboard (kept as you had it) -->
+      <!-- Smart Expense Dashboard -->
       <div class="rounded-lg shadow-lg overflow-hidden bg-white">
         <div class="relative">
           <img src="images/dashboard.PNG" alt="Smart Expense Dashboard" class="w-full h-40 object-cover">
@@ -69,17 +73,15 @@
         </div>
       </div>
 
-      <!-- X-ray Project tile (new) -->
+      <!-- X-ray Processor -->
       <div class="rounded-lg shadow-lg overflow-hidden bg-white">
         <div class="relative">
-          <!-- small thumbnail for the X-ray project; swap `project2.png` with your screenshot -->
           <img src="images/project2.png" alt="X-ray Processor" class="w-full h-40 object-cover">
           <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
             <h3 class="text-white text-lg font-semibold text-center px-2">X-ray Image Processor</h3>
           </div>
         </div>
         <div class="p-4 text-center">
-          <!-- link to the project repo/app - update URL when ready -->
           <a href="https://github.com/a-farhat/XrayProcessor" target="_blank"
              class="inline-block text-sm bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900 transition">
             🔗 View on GitHub
@@ -87,7 +89,7 @@
         </div>
       </div>
 
-      <!-- Project 3 placeholder -->
+      <!-- Project 3 -->
       <div class="rounded-lg shadow-lg overflow-hidden bg-white">
         <div class="relative">
           <img src="images/project3.png" alt="Project 3" class="w-full h-40 object-cover">
@@ -103,7 +105,7 @@
         </div>
       </div>
 
-      <!-- Project 4 placeholder -->
+      <!-- Project 4 -->
       <div class="rounded-lg shadow-lg overflow-hidden bg-white">
         <div class="relative">
           <img src="images/project4.png" alt="Project 4" class="w-full h-40 object-cover">
@@ -122,9 +124,29 @@
     </div>
   </section>
 
+  <!-- Contact Section -->
+  <section id="contact" class="bg-white py-12">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-3xl font-semibold mb-4">Contact</h2>
+      <p class="text-gray-600 mb-6">Have a question or collaboration idea? Send me a message!</p>
+      <form action="https://formspree.io/f/xyznlkqb" method="POST" class="space-y-4 max-w-md mx-auto">
+    <input type="text" name="name" placeholder="Your Name" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    <input type="email" name="email" placeholder="Your Email" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    <textarea name="message" rows="4" placeholder="Your Message" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Send Message</button>
+        </form>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="bg-white py-6 text-center text-gray-600 text-sm">
-    © 2025 Ahmad Farhat. Built with GitHub Pages.
+    <p>© 2025 Ahmad Farhat. Built with GitHub Pages.</p>
+    <div class="flex justify-center gap-6 mt-3">
+      <a href="https://github.com/a-farhat" target="_blank" class="text-gray-700 hover:text-gray-900 font-medium">GitHub</a>
+      <a href="https://www.linkedin.com/in/ahmadfarhat/" target="_blank" class="text-gray-700 hover:text-gray-900 font-medium">LinkedIn</a>
+      <a href="https://medium.com/@ahmadgmail" target="_blank" class="text-gray-700 hover:text-gray-900 font-medium">Medium</a>
+      <a href="https://www.buymeacoffee.com/afarhat" target="_blank" class="text-yellow-600 hover:text-yellow-700 font-medium">☕ Coffee</a>
+    </div>
   </footer>
 
 </body>
