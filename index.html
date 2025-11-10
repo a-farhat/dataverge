@@ -189,15 +189,32 @@
 
     <script>
         const counterEl = document.getElementById('count');
-        fetch('https://api.countapi.xyz/hit/dataverge-site/visits')
+        const namespace = 'dataverge-site';
+        const key = 'visits';
+
+        // Initialize (creates it the first time if not existing)
+        fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
+            .then(res => {
+                if (!res.ok) {
+                    // If namespace doesn't exist yet, create it
+                    return fetch(`https://api.countapi.xyz/create?namespace=${namespace}&key=${key}&value=0`);
+                }
+                return res;
+            })
+            .then(() => {
+                // Increment and fetch the latest value
+                return fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
+            })
             .then(res => res.json())
             .then(data => {
                 counterEl.textContent = data.value.toLocaleString();
             })
-            .catch(() => {
-                counterEl.textContent = 'N/A';
+            .catch(err => {
+                console.error('Visitor counter error:', err);
+                counterEl.textContent = 'Error';
             });
     </script>
+
 
 
 </body>
